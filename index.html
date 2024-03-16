@@ -9,11 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Cormorant+Garamond:ital,wght@1,300&family=Creepster&family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <section class="mainPage">
         <!-- start header  -->
-        <div class="header">
+        <div class="header" id="home">
             <div class="navBar">
                 <div class="logo">
                     <div class="div">
@@ -72,7 +73,7 @@
         <!-- end header  -->
         <!-- ---------------------------------------------- -->
         <!-- start about  -->
-        <div class="about">
+        <div class="about" id="about">
             <h2>About BE TECH</h2>
             <div class="aboutContent">
                 <div class="data">
@@ -177,7 +178,7 @@
         <!-- end about  -->
         <!-- ----------------------------------------------- -->
         <!-- start services  -->
-        <div class="services">
+        <div class="services" id="service">
             <h2>BE TECH services</h2>
             <p>Create your site for every business</p>
             <div class="ourServ">
@@ -225,7 +226,7 @@
         </div> 
         <!-- end services  -->
         <!-- ----------------------------------------------- -->
-        <div class="contactSection">
+        <div class="contactSection" id="contact">
             <div class="location">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d912286.2442743783!2d32.02841135!3d26.72464355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1706974630981!5m2!1sen!2seg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -242,10 +243,25 @@
                     </div>
                 </div>
                 <h3>Your project details</h3>
-                <form action="">
-                    <textarea name="" id="" placeholder="enter your idea here"></textarea>
+                <form action="" id="projectData">
+                    <input type="text" name="userName" id="name" placeholder=" Your Name" required>
+                    <input type="email" name="userEmail" id="email" placeholder=" Your Email" required>
+                    <div class="phoneIdea">
+                        <input type="number" name="userPhone" id="phone" placeholder="Phone NUmber" required>
+                        <select name="category" id="category">
+                            <optgroup label="WebSite">
+                                <option value="website">Web Application</option>
+                            </optgroup>
+                            <optgroup label="mobileApp">
+                                <option value="android">Android App</option>
+                                <option value="ios">iOS App</option>
+                                <option value="desktop">Windows</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <textarea name="projectDisc" id="description" placeholder="enter your idea here" required></textarea>
                     <br>
-                    <input type="submit" value="Send Idea">
+                    <input type="submit" value="Send Details">
                 </form>
                 <div class="links">
                     <a href="https://www.facebook.com/profile.php?id=61550689022377"><i class="fa-brands fa-square-facebook fa-beat fa-2xl"></i></a>
